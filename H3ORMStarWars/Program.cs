@@ -115,12 +115,24 @@ namespace H3ORMStarWars
 
             // Opgave 10
             Console.WriteLine();
-            Console.WriteLine("Opgave 10: \nBLA BLA BLA");
+            Console.WriteLine("Opgave 10:");
+           // var borborbor = planets.Where(x => new { x.Diameter, x.Population }).OrderBy(x => 4 * Math.PI * Math.Pow(x.Diameter / 2, 2) / x.Population);
 
 
             // Opgave 11 
             Console.WriteLine();
-            Console.WriteLine("Opgave 11: \nBLA BLA BLA");
+            Console.WriteLine("Opgave 11:");
+
+            var first = planets
+               .Where(x => x.RotationPeriod > 0);
+
+            var except = planets.Except(first);
+
+
+            foreach (var start in except)
+            {
+                Console.WriteLine(start.Name);
+            }
 
 
             // Opgave 12
