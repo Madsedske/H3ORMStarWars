@@ -116,7 +116,7 @@ namespace H3ORMStarWars
             // Opgave 10
             Console.WriteLine();
             Console.WriteLine("Opgave 10:");
-           // var borborbor = planets.Where(x => new { x.Diameter, x.Population }).OrderBy(x => 4 * Math.PI * Math.Pow(x.Diameter / 2, 2) / x.Population);
+            var borborbor = planets.Where(x => x.Diameter > 0 && x.Population > 0).OrderBy(x => 4 * Math.PI * Math.Pow(x.Diameter / 2, 2) / x.Population);
 
 
             // Opgave 11 
